@@ -10,7 +10,7 @@ const PomodoroTimer = () => {
     if (isRunning && time > 0) {
       timer = setInterval(() => {
         dispatch({ type: 'TICK' });
-      }, 10);
+      }, 1000);
     }
     return () => clearInterval(timer);
   }, [isRunning, time, dispatch]);
